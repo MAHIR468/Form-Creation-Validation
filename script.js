@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const email = document.getElementById('email').value.trim();
         const password = document.getElementById('password').value.trim();
 
-        // Validation status and message array
+        // Validation status and messages array
         let isValid = true;
         const messages = [];
 
@@ -37,12 +37,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (isValid) {
             feedbackDiv.textContent = 'Registration successful!';
-            feedbackDiv.style.color = '#28a745';
-            feedbackDiv.style.backgroundColor = '#d4edda';
+            feedbackDiv.style.color = '#28a745'; // ✅ green for success
         } else {
             feedbackDiv.innerHTML = messages.join('<br>');
-            feedbackDiv.style.color = '#d8000c';
-            feedbackDiv.style.backgroundColor = '#ffbaba';
+            feedbackDiv.style.color = '#dc3545'; // ✅ red for error (as required)
         }
     });
 });
